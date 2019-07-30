@@ -1,41 +1,39 @@
 #pragma once
-#include "Stack.h"
-#include "ArrayStack.h"
-
+#include "StackArray.h"
+#include "StackList.h"
 template<class T>
-class StackBody: public Stack<T>
+class StackBody : public Stack<T>
 {
-protected:
-	//Stack<T> *Body;
+
 public:
-	
+
+	Stack<T> *Body;
 	StackBody(int size)
 	{
-		
-		this->Body = new ArrayStack<T>(size);
+
+		Body = new StackArray<T>(size);
 	};
 
-	/*
+
 	StackBody()
 	{
 		Body = new StackList<T>;
 	};
-*/
+
 	virtual void Push(T items)
 	{
-		this->Body->Push(items);
+		Body->Push(items);
 	};
 	virtual T Pop()
 	{
-		return this->Body->Pop();
+		return Body->Pop();
 	};
 	virtual bool isEmpty()
 	{
-		return this->Body->isEmpty();
+		return Body->isEmpty();
 	};
 	virtual bool isFull()
 	{
-		return this->Body->isFull();
+		return Body->isFull();
 	};
 };
-

@@ -155,6 +155,9 @@
     <ClInclude Include="ListInt.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Stack.h" />
+    <ClInclude Include="StackArray.h" />
+    <ClInclude Include="StackBody.h" />
+    <ClInclude Include="StackList.h" />
     <ClInclude Include="VectorInt.h" />
   </ItemGroup>
   <ItemGroup>

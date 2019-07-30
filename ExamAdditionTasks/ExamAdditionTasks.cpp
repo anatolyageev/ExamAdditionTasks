@@ -5,9 +5,27 @@
 #include <iostream>
 #include "ListInt.h"
 #include "VectorInt.h"
+#include "Stack.h"
 #include "StackBody.h"
 
 
+class MyInfo
+{
+public:
+	int age;
+	string name;
+	MyInfo()
+	{
+		name = "noname";
+		age = 0;
+	}
+	friend ostream&	operator << (ostream& os, const MyInfo& t)
+	{
+		os << "name=" << t.name << "\nage=" << t.age << endl;
+		os << endl;
+		return os;
+	}
+};
 
 int main()
 {
@@ -33,6 +51,16 @@ int main()
 		cout << v1->current() << endl;
 	};
 	
+	Stack<MyInfo>* s = new StackBody<MyInfo>(10);//внутри будет создан стек через массив
+	MyInfo M1;
+	MyInfo i;
+	cout << "Now List Stack:" << endl;
+	s = new StackBody<MyInfo>();//внутри будет создан стек через список
+	s->Push(M1);
+	i = s->Pop();
+	cout << i << endl;
+	delete s;
+
 	delete list;
 
 
