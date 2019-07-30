@@ -3,10 +3,40 @@
 
 #include "pch.h"
 #include <iostream>
+#include "ListInt.h"
+#include "VectorInt.h"
+#include "StackBody.h"
+
+
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	ListInt* list = new ListInt(5);
+	cout << "Iterator working: " << endl;
+	while (list->hasNext())
+	{
+		cout << list->current() << endl;
+	};
+
+	cout << "<< overridden: " << endl;
+	cout << *list << endl;
+
+	VectorInt *v1 = new VectorInt(3);
+	//v1.print();
+	cout << *v1;
+	cout << "Indexation in Vector working: " << endl;
+	cout << v1[0] << endl;
+	cout << "Iterator in Vector working: " << endl;
+	//cout << v1->current() << endl;
+	while (v1->hasNext())
+	{
+		cout << v1->current() << endl;
+	};
+	
+	delete list;
+
+
+	system("pause");
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
