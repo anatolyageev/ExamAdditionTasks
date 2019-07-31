@@ -152,13 +152,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Iterator.h" />
+    <ClInclude Include="IteratorT.h" />
     <ClInclude Include="ListInt.h" />
+    <ClInclude Include="ListT.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="StackArray.h" />
     <ClInclude Include="StackBody.h" />
     <ClInclude Include="StackList.h" />
     <ClInclude Include="VectorInt.h" />
+    <ClInclude Include="VectorT.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ExamAdditionTasks.cpp" />

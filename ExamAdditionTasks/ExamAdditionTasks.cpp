@@ -7,6 +7,8 @@
 #include "VectorInt.h"
 #include "Stack.h"
 #include "StackBody.h"
+#include "ListT.h"
+#include "VectorT.h"
 
 
 class MyInfo
@@ -50,6 +52,17 @@ int main()
 	{
 		cout << v1->current() << endl;
 	};
+	cout << "Template list works : " << endl;
+	ListT<MyInfo>* s5 = new ListT<MyInfo>(4);
+
+	cout << *s5 << endl;
+
+	cout << "Template Vector works : " << endl;
+
+	VectorT<MyInfo>* vectorTest = new VectorT<MyInfo>(6);
+
+	cout << *vectorTest << endl;
+
 	
 	Stack<MyInfo>* s = new StackBody<MyInfo>(10);//внутри будет создан стек через массив
 	MyInfo M1;

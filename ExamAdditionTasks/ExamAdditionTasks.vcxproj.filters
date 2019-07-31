@@ -39,6 +39,15 @@
     <ClInclude Include="StackBody.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="VectorT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ListT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IteratorT.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
